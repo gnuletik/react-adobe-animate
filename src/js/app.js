@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import AnimateCC from "react-adobe-animate";
 
-import AnimateCC from "./AnimateCC";
-
-class App extends React.Component {
+export default class Component extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -13,22 +12,23 @@ class App extends React.Component {
 
   onClick = () => this.setState({ paused: !this.state.paused })
 
-  getAnimationObject = obj => (this.lis = obj, window.lis = obj)
+  getAnimationObject = obj => (this.animationObject = obj)
 
   render() {
     return (
-      <div>
+      <div style={{ width: "400px" }}>
+        <p>asd</p>
         <AnimateCC
-          fileName="lishtml5"
+          animationName="lishtml5"
           composition="C1475B64B160904BB90B34246A5FF54B"
           getAnimationObject={this.getAnimationObject}
           paused={this.state.paused}
         />
 
-        <button onClick={this.onClick}>Click!</button>
+        <button onClick={this.onClick}>{this.state.paused ? "Unpause" : "Pause"}</button>
       </div>
     );
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<Component />, document.getElementById("app"));
