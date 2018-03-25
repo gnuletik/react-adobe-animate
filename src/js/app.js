@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import AnimateCC from "react-adobe-animate";
+import AnimateCC from "react-adobe-animate"; // eslint-disable-line import/no-extraneous-dependencies
 
 export default class Component extends React.Component {
   constructor() {
@@ -20,7 +20,6 @@ export default class Component extends React.Component {
         <p>asd</p>
         <AnimateCC
           animationName="lishtml5"
-          composition="C1475B64B160904BB90B34246A5FF54B"
           getAnimationObject={this.getAnimationObject}
           paused={this.state.paused}
         />

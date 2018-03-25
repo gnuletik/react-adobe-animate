@@ -19,7 +19,8 @@
     ],
     "scripts": [
       "https://code.createjs.com/createjs-2015.11.26.min.js",
-      "/lishtml5.js"
+      "/lishtml5.js",
+      "/a.js"
     ],
     "lang": "en-US",
     "appMountId": "app"
