@@ -1,15 +1,18 @@
 {
   "name": "react-adobe-animate-demo",
-  "version": "1.0.0",
-  "author": "Bartosz Legięć <bartosz@legiec.eu> (http://legiec.eu/)",
-  "license": "MIT",
+  "version": "2.0.0",
+  "description": "react-adobe-animate example",
+  "author": {
+    "name": "Bartosz Legięć",
+    "email": "bartosz@legiec.eu",
+    "url": "https://legiec.io"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bibixx/frontend-boilerplate",
-    "ghbranch": "gh-pages"
+    "url": "https://github.com/bibixx/react-adobe-animate"
   },
   "config": {
-    "title": "Your app title",
+    "title": "React Adobe Animate exmaple",
     "mobile": true,
     "links": [
       {
@@ -19,8 +22,8 @@
     ],
     "scripts": [
       "https://code.createjs.com/createjs-2015.11.26.min.js",
-      "/lishtml5.js",
-      "/a.js"
+      "./lishtml5.js",
+      "./a.js"
     ],
     "lang": "en-US",
     "appMountId": "app"
@@ -30,10 +33,8 @@
   ],
   "scripts": {
     "start": "webpack-dev-server --config ./build/webpack.dev.js",
-    "deploy": "sh ./build/deploy.sh",
     "clean": "rimraf dist",
-    "build": "npm run clean && cross-env NODE_ENV=production webpack --config ./build/webpack.prod.js -p --progress --hide-modules",
-    "monitor": "npm run clean && cross-env NODE_ENV=production MONITOR=true webpack --config ./build/webpack.prod.js -p --progress --hide-modules"
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --config ./build/webpack.prod.js -p --progress --hide-modules"
   },
   "dependencies": {
     "history": "^4.7.2",
@@ -42,6 +43,7 @@
     "preact-compat": "^3.17.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
+    "react-adobe-animate": "^2.0.1",
     "react-dom": "^16.2.0",
     "tailwindcss": "^0.1.6"
   },

@@ -17,7 +17,6 @@ export default class Component extends React.Component {
   render() {
     return (
       <div style={{ width: "400px" }}>
-        <p>asd</p>
         <AnimateCC
           animationName="lishtml5"
           getAnimationObject={this.getAnimationObject}

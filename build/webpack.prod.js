@@ -11,7 +11,9 @@ const { config } = common;
 const webpackConfig = {
   entry: config.entry,
 
-  output: config.output,
+  output: {
+    ...config.output,
+  },
   resolve: config.resolve,
 
   module: {
